@@ -1,1 +1,1 @@
-Simple Panda3D program created using the instructions in the [Panda3D Hello World tutorial](https://docs.panda3d.org/1.10/python/introduction/tutorial/index)
+Simple Panda3D program created using the instructions in the [Panda3D Hello World Tutorial](https://docs.panda3d.org/1.10/python/introduction/tutorial/index).
