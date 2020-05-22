@@ -2,7 +2,7 @@ from math import pi, sin, cos
 
 from direct.showbase.ShowBase import ShowBase
 from direct.task import Task
-
+from direct.actor.Actor import Actor
 
 
 class MyApp(ShowBase):
@@ -20,6 +20,13 @@ class MyApp(ShowBase):
 
         # Add the spinCameraTask procedure to the task manager.
         self.taskMgr.add(self.spinCameraTask, "SpinCameraTask")
+
+        # Load and transform the panda actor.
+        self.pandaActor = Actor("models/panda-model", {"walk" : "models/panda-walk4"})
+        self.pandaActor.setScale(0.005, 0.005, 0.005)
+        self.pandaActor.reparentTo(self.render)
+        # Loop its animation.
+        self.pandaActor.loop("walk")
 
     def spinCameraTask(self, task):
         angleDegrees = task.time * 6.0
